@@ -89,12 +89,7 @@ function! <sid>showScrollbar()
     elseif clear_top > (win_height - 1)
         let clear_top=win_height - 1
     endif
-    let thumb_height=float2nr((win_height * win_height) / total_lines)
-    if thumb_height < 1
-        let thumb_height=1
-    elseif thumb_height > win_height
-        let thumb_height=win_height
-    endif
+    let thumb_height=1
     let thumb_height=thumb_height + clear_top
     let linectr=1
     while linectr <= clear_top
